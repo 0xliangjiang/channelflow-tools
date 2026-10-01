@@ -1,5 +1,7 @@
 # ChannelFlow — Token Tools
 
+> Language: [English](README.md) · [中文](README.zh-CN.md)
+
 Local-only Chrome (MV3) extension: view and copy **your own** Discord
 authorization token. Nothing leaves your device.
 

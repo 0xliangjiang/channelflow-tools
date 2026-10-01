@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>隐私政策 — ChannelFlow — Token Tools</title>
+  <style>
+    :root {
+      --bg: #0e1116; --panel: #161a23; --border: #242a38;
+      --text: #e7eaf2; --muted: #8b93a7;
+      --accent-a: #6366f1; --accent-b: #22d3ee;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 15px/1.7 -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      padding: 48px 20px;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    h1 {
+      font-size: 26px; margin: 0 0 4px;
+      background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .sub { color: var(--muted); font-size: 13px; margin: 0 0 32px; }
+    h2 { font-size: 18px; margin: 32px 0 10px; padding-top: 16px; border-top: 1px solid var(--border); }
+    p { color: var(--text); }
+    a { color: var(--accent-b); }
+    code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: var(--accent-b); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; font-size: 14px; }
+    th { background: var(--panel); }
+    td { background: var(--panel); }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>隐私政策 <a href="index.html" style="float:right;font-size:13px;text-decoration:none;font-weight:600">English</a></h1>
+    <p class="sub">ChannelFlow — Token Tools · 最后更新：2026-01-01 · 自安装之时起生效</p>
+
+    <div class="card">
+      一句话概括：<strong>本扩展不会将任何数据传出你的设备。</strong>
+    </div>
+
+    <h2>1. 概述</h2>
+    <p>ChannelFlow — Token Tools（以下简称「本扩展」）是一款本地工具，用于查看并复制<strong>你自己的</strong>
+    Discord 授权令牌。本政策说明本扩展处理哪些数据以及如何处理。</p>
+
+    <h2>2. 我们处理的数据</h2>
+    <table>
+      <tr><th>项目</th><th>说明</th></tr>
+      <tr><td>Discord 授权令牌</td><td>仅在你登录 discord.com 期间，被动读取你自己的 Discord API 流量中的 <code>Authorization</code> 请求头。</td></tr>
+      <tr><td>扩展偏好设置</td><td>仅界面语言切换，不持久化保存。</td></tr>
+    </table>
+    <p>本扩展<strong>不</strong>处理：密码、邮箱、聊天内容、浏览历史、cookies、支付信息，以及除 Discord API 之外任何网站的数据。</p>
+
+    <h2>3. 数据如何被收集</h2>
+    <p>本扩展通过 <code>webRequest</code> API 观察发往 <code>https://discord.com/api/v9/*</code> 的请求，
+    并读取 Discord 自身附加在这些请求上的 <code>Authorization</code> 请求头。仅在你安装本扩展并使用 Discord 时发生。</p>
+
+    <h2>4. 数据如何存储</h2>
+    <p>捕获到的令牌写入 <code>chrome.storage.local</code>——一个仅存在于<strong>你的设备</strong>的存储区域。
+    它不会同步到任何账户，其他扩展或网站也无法访问。</p>
+
+    <h2>5. 数据用途</h2>
+    <p>令牌仅用于一个目的：在扩展弹窗中显示（默认打码），并在你点击「Copy」时复制到剪贴板。不进行任何其他处理。</p>
+
+    <h2>6. 共享与传输</h2>
+    <p><strong>无。</strong>本扩展不含任何分析、跟踪、广告、远程代码，也不存在任何通过网络发送数据的代码路径。
+    令牌绝不会通过本扩展离开你的设备。</p>
+
+    <h2>7. 保留与删除</h2>
+    <p>点击弹窗中的 <strong>Clear</strong> 立即删除令牌。卸载本扩展会移除其全部本地数据。本扩展不会在其他任何地方创建备份或副本。</p>
+
+    <h2>8. 安全性</h2>
+    <p>最小权限集（见扩展列表页）。无远程脚本、无第三方依赖。令牌在界面中默认打码显示。</p>
+
+    <h2>9. 您的权利</h2>
+    <p>你可以随时查看、复制和删除令牌。由于所有数据均保存在本地，不存在需要请求删除的服务器端副本。</p>
+
+    <h2>10. 政策变更</h2>
+    <p>若本政策发生变更，更新版本将发布在此 URL，并更新「最后更新」日期。</p>
+
+    <h2>11. 联系方式</h2>
+    <p>邮箱：<a href="mailto:support@example.com">support@example.com</a> —— 发布前请替换为你的联系地址。</p>
+  </div>
+</body>
+</html>
