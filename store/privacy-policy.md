@@ -70,4 +70,4 @@ If this policy changes, the updated version will be published at this URL and th
 
 ## 11. Contact
 
-Email: `support@example.com` — replace with your contact address before publishing.
+Email: `liangjiang0609@gmail.com`
