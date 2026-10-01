@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ChannelFlow — Token Tools · Screenshot (idle)</title>
+  <link rel="stylesheet" href="../popup.css">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body {
+      width: 1280px;
+      height: 800px;
+      background:
+        radial-gradient(1200px 620px at 28% -12%, rgba(99, 102, 241, 0.28), transparent 60%),
+        radial-gradient(1000px 620px at 92% 112%, rgba(34, 211, 238, 0.20), transparent 60%),
+        linear-gradient(160deg, #0b0e14, #12172a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .stage {
+      zoom: 1.7;
+      background: var(--bg);
+      border-radius: 18px;
+      box-shadow: 0 32px 90px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <main class="app">
+      <header class="header">
+        <div class="brand">
+          <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+            <defs>
+              <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#22d3ee"/>
+              </linearGradient>
+            </defs>
+            <rect class="logo-bg" x="1.5" y="1.5" width="45" height="45" rx="12"/>
+            <rect class="logo-bar" x="8" y="13" width="22" height="7" rx="3.5" fill="url(#barGrad)"/>
+            <rect class="logo-bar" x="18" y="20.5" width="22" height="7" rx="3.5" fill="url(#barGrad)"/>
+            <rect class="logo-bar" x="8" y="28" width="22" height="7" rx="3.5" fill="url(#barGrad)"/>
+          </svg>
+          <div class="brand-text">
+            <h1>ChannelFlow</h1>
+            <p>Token Tools</p>
+          </div>
+        </div>
+        <button class="lang-btn">中</button>
+      </header>
+
+      <section class="status-row">
+        <div class="status-pill waiting">
+          <span class="dot"></span>
+          <span>Waiting for Discord</span>
+        </div>
+        <span class="status-hint">auto-captures your token</span>
+      </section>
+
+      <section class="card token-card">
+        <div class="card-head">
+          <span class="label">Authorization Token</span>
+          <span class="badge">API header</span>
+        </div>
+        <div class="token-box">
+          <code class="token-value placeholder">No token yet — open Discord and log in</code>
+        </div>
+        <div class="meta">
+          <span>Length</span><b>—</b>
+          <span class="meta-sep">·</span>
+          <span>Captured</span><b>—</b>
+        </div>
+        <div class="actions">
+          <button class="btn icon-btn" disabled>👁</button>
+          <button class="btn primary" disabled>Copy</button>
+          <button class="btn">Refresh</button>
+          <button class="btn ghost" disabled>Clear</button>
+        </div>
+      </section>
+
+      <section class="card info-card">
+        <div class="info-row"><span>State</span><b>Idle</b></div>
+        <div class="info-row"><span>Source</span><b>—</b></div>
+        <div class="info-row"><span>Storage</span><b>Local only</b></div>
+      </section>
+
+      <footer class="footer">
+        <span>🔒</span>
+        <span>Local only — your token never leaves this device</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

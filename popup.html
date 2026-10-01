@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChannelFlow — Token Tools</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#6366f1"/>
+              <stop offset="1" stop-color="#22d3ee"/>
+            </linearGradient>
+          </defs>
+          <rect class="logo-bg" x="1.5" y="1.5" width="45" height="45" rx="12"/>
+          <rect class="logo-bar" x="8"  y="13" width="22" height="7" rx="3.5" fill="url(#barGrad)"/>
+          <rect class="logo-bar" x="18" y="20.5" width="22" height="7" rx="3.5" fill="url(#barGrad)"/>
+          <rect class="logo-bar" x="8"  y="28" width="22" height="7" rx="3.5" fill="url(#barGrad)"/>
+        </svg>
+        <div class="brand-text">
+          <h1>ChannelFlow</h1>
+          <p data-i18n="subtitle">Token Tools</p>
+        </div>
+      </div>
+      <button id="langBtn" class="lang-btn" title="Switch language">中</button>
+    </header>
+
+    <!-- Live status pill -->
+    <section class="status-row">
+      <div class="status-pill" id="statusPill">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText" data-i18n="statusListening">Listening</span>
+      </div>
+      <span class="status-hint" id="statusHint" data-i18n="statusHint">auto-captures your token</span>
+    </section>
+
+    <!-- Token card -->
+    <section class="card token-card">
+      <div class="card-head">
+        <span class="label" data-i18n="tokenLabel">Authorization Token</span>
+        <span class="badge" data-i18n="sourceBadge">API header</span>
+      </div>
+
+      <div class="token-box" id="tokenBox">
+        <code class="token-value" id="tokenValue">—</code>
+      </div>
+
+      <div class="meta">
+        <span data-i18n="length">Length</span>
+        <b id="tokenLength">—</b>
+        <span class="meta-sep">·</span>
+        <span data-i18n="captured">Captured</span>
+        <b id="capturedAt">—</b>
+      </div>
+
+      <div class="actions">
+        <button id="revealBtn" class="btn icon-btn" title="Reveal">👁</button>
+        <button id="copyBtn" class="btn primary" data-i18n="copy">Copy</button>
+        <button id="refreshBtn" class="btn" data-i18n="refresh">Refresh</button>
+        <button id="clearBtn" class="btn ghost" data-i18n="clear">Clear</button>
+      </div>
+    </section>
+
+    <!-- Detail rows -->
+    <section class="card info-card">
+      <div class="info-row">
+        <span data-i18n="rowState">State</span>
+        <b id="rowState">—</b>
+      </div>
+      <div class="info-row">
+        <span data-i18n="rowSource">Source</span>
+        <b id="rowSource">—</b>
+      </div>
+      <div class="info-row">
+        <span data-i18n="rowStorage">Storage</span>
+        <b data-i18n="rowStorageValue">Local only</b>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>🔒</span>
+      <span data-i18n="footer">Local only — your token never leaves this device</span>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
